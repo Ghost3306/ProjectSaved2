@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}   
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="icon" type="image/png"  href="{% static 'robot.png'%}" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>LOGIN</p>
+        </div>
+        <div class="log-input">
+            <form action="login" method="post" id="login-form">
+            {%csrf_token%}
+                <p>Username : <input type="text" name="user" id="user" class="input-info"></p>
+                <p>Password : <input type="text" name="pass" id="pass" class="input-info"></p> 
+                <button type="submit" id="login" class="btn">Login</button>
+                <button type="reset" id="cancel" class="btn">Cancel</button>
+                <br>
+                
+            </form>
+            <form action="reg" method="post">
+                {%csrf_token%}
+                <button type="submit">Register</button>
+            </form>
+        </div>   
+    </div>
+</body>
+</html>
