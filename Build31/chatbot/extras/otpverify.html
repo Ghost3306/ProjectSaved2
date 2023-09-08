@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp Verify</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static '/css/otpverify.css' %}">
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <form class="message-form">
+            {%csrf_token%}
+            <p>We send otp to your email</p>
+            <input type="text" name="otp" id="otp" placeholder="0000">
+            <button type="submit" id="btn">Submit</button>
+        </form>
+    </div>
+            
+   
+</body>
+</html>
