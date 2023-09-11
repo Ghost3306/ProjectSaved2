@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+<body>
+    <div class="container">
+        <div id="cbody">
+           
+            <li>Hello...</li>
+            <li>Hii</li>
+            
+        </div>
+        <div class="chat-input">
+            <form class="message-form">
+                {%csrf_token%}
+                <div class="input-group">
+                  <input type="text" class="form-control message-input" placeholder="Type your message...">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary btn-send">Send</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+        {{username}}
+    </div>
+  
+</body>
+</html>
