@@ -1,0 +1,10 @@
+<li class="chat outgoing">
+                <p>Lorem ipsum dolor</p>
+            </li>
+
+
+            setTimeout(()=>{
+                chatbox.appendChild(createChatLi("Thinking...","incoming"))
+            },600);
+            
+            chatbox.appendChild(createChatLi("Hiii...","incoming"))

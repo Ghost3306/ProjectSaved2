@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(196, 255, 255);
+}
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 600px;
+    transform: translateX(-50%);
+    display: inline-flex;   
+}
+
+.chat-body{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    background: #ffb0b0;
+}
