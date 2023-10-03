@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Password</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/crpass.css' %}">
+    <script src="{% static '/js/crpass.js' %}" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+        
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+        <form action="" method="post">
+            {%csrf_token%}
+            <p>Create New Password</p>
+            <input type="password" name="crpass" id="">
+            <input type="password" name="cnpass" id="">
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</body>
+</html>
