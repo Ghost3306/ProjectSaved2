@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/forgot.css' %}">
+    <script src="{% static '/js/email_send.js' %}" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post">
+            {%csrf_token%}
+            <p>Write your email for authentication</p>
+            <input type="text" name="emailtxt" id="emailtxt" placeholder="abc@gmail.com">
+            <button type="submit" id="btn">Send</button>
+        </form>
+    </div>
+</body>
+</html>
